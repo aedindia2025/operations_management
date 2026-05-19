@@ -689,7 +689,7 @@ export default function OperationApprovalList() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f6f7ea_0%,#f9f7ef_35%,#f5f5f0_100%)] p-4 md:p-6">
-      <PageTopbar title="Operation Approval Lists" breadcrumbs={["Operation", "Operation Approval"]} />
+      <PageTopbar title="Operation Approval List" breadcrumbs={["Operation", "Operation Approval"]} />
 
       <div className="overflow-visible rounded-[30px] border border-[#e8e1c7] bg-white shadow-[0_24px_60px_rgba(84,96,28,0.08)]">
         <PageTabs
