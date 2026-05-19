@@ -1,0 +1,101 @@
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\aed542\AppData\Local\Programs\Python\Python314\Lib\socket.py", line 870, in create_connection
+    raise exceptions[0]
+  File "C:\Users\aed542\AppData\Local\Programs\Python\Python314\Lib\socket.py", line 855, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 247, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aed542\AppData\Local\Programs\Python\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\aed542\AppData\Local\Programs\Python\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\management\commands\runserver.py", line 136, in inner_run
+    self.check_migrations()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\management\base.py", line 574, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\migrations\executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\migrations\loader.py", line 58, in __init__
+    self.build_graph()
+    ~~~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\migrations\loader.py", line 235, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\migrations\recorder.py", line 81, in applied_migrations
+    if self.has_table():
+       ~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\migrations\recorder.py", line 57, in has_table
+    with self.connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 306, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 247, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "\\192.168.11.31\d\otm\Backend\.deps\pymysql\connections.py", line 723, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")

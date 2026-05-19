@@ -1,0 +1,6 @@
+[26/Mar/2026 14:01:38] "POST /api/master/stock-position/pending/ HTTP/1.1" 200 2963
+[26/Mar/2026 14:01:38,351] - Broken pipe from ('127.0.0.1', 50965)
+Bad Request: /api/master/stock-position/pending/
+[26/Mar/2026 14:01:55] "POST /api/master/stock-position/pending/ HTTP/1.1" 400 107
+[26/Mar/2026 14:02:14] "POST /api/master/stock-position/pending/ HTTP/1.1" 200 2963
+[26/Mar/2026 14:02:14,446] - Broken pipe from ('127.0.0.1', 50973)

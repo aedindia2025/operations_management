@@ -1,0 +1,16 @@
+
+> ascent-otm-frontend@1.0.0 dev:server
+> vite --host 0.0.0.0 --port 55173 --strictPort true --mode server
+
+Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m42524[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m55173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.11.76:[1m55173[22m/[39m
+[2m10:10:34 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/login/Login.tsx, /src/index.css[22m
+[2m10:10:53 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/login/Login.tsx, /src/index.css[22m
+[2m10:10:59 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/login/Login.tsx, /src/index.css[22m
+[2m10:15:29 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/TenantCreationList.tsx, /src/index.css[22m
+[2m10:17:26 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/context/AuthContext.tsx[22m
+[2m10:17:30 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/login/Login.tsx, /src/index.css[22m

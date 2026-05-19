@@ -1,0 +1,25 @@
+
+> ascent-otm-frontend@1.0.0 dev:local
+> vite --host 0.0.0.0 --port 5173 --mode development
+
+Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m29375[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.11.70:[1m5173[22m/[39m
+[2m10:23:11 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/TenantCreationList.tsx, /src/pages/admin/TenantCreationForm.tsx[22m
+[2m10:23:15 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/TenantCreationForm.tsx, /src/index.css[22m
+[2m10:24:08 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/TenantCreationList.tsx, /src/index.css[22m
+[2m10:29:59 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m10:30:03 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/layout/Sidebar.tsx[22m
+[2m10:30:15 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:37:05 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m10:59:20 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m10:59:21 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m10:59:54 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m11:00:58 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m
+[2m1:19:00 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/settings/CustomerCreationForm.tsx, /src/index.css[22m
+[2m2:00:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/context/AuthContext.tsx[22m
+[2m2:00:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/index.css[22m
+[2m3:55:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Sidebar.tsx, /src/index.css[22m

@@ -1,0 +1,448 @@
+[2m11:05:23 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. You may need to install appropriate plugins to handle the .xlsx file format, or if it's an asset, add "**/*.xlsx" to `assetsInclude` in your configuration.[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mY:/otm/frontend/src/pages/settings/item_creation_excel_format.xlsx[39m
+      at TransformPluginContext._formatError (file:///Y:/otm/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Y:/otm/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at TransformPluginContext.transform (file:///Y:/otm/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64259:14)
+      at async PluginContainer.transform (file:///Y:/otm/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Y:/otm/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:05:23 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. You may need to install appropriate plugins to handle the .xlsx file format, or if it's an asset, add "**/*.xlsx" to `assetsInclude` in your configuration.
+[2m11:06:00 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. You may need to install appropriate plugins to handle the .xlsx file format, or if it's an asset, add "**/*.xlsx" to `assetsInclude` in your configuration.
+[2m11:06:16 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. You may need to install appropriate plugins to handle the .xlsx file format, or if it's an asset, add "**/*.xlsx" to `assetsInclude` in your configuration.
+[2m11:06:24 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. You may need to install appropriate plugins to handle the .xlsx file format, or if it's an asset, add "**/*.xlsx" to `assetsInclude` in your configuration.
+[2m1:38:25 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\service\InstallationList.tsx: Identifier 'useState' has already been declared. (5:9)
+
+[0m [90m 3 |[31m [36mimport[31m [33mPageTopbar[31m [36mfrom[31m [32m"../../components/common/PageTopbar"[31m[33m;[31m
+ [90m 4 |[31m
+[31m[1m>[22m[31m[90m 5 |[31m [36mimport[31m { useState } [36mfrom[31m [32m"react"[31m[33m;[31m
+ [90m   |[31m          [31m[1m^[22m[31m
+ [90m 6 |[31m
+ [90m 7 |[31m [36mconst[31m [33mTABS[31m [33m=[31m [
+ [90m 8 |[31m   [32m"Installation Pending"[31m[33m,[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/service/InstallationList.tsx[39m:5:9
+[33m  3  |  import PageTopbar from "../../components/common/PageTopbar";
+  4  |  
+  5  |  import { useState } from "react";
+     |           ^
+  6  |  
+  7  |  const TABS = [[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptScopeHandler.declareName (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4866:21)
+      at TypeScriptParserMixin.declareNameFromIdentifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:7567:16)
+      at TypeScriptParserMixin.checkIdentifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:7563:12)
+      at TypeScriptParserMixin.checkLVal (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:7500:12)
+      at TypeScriptParserMixin.finishImportSpecifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14266:10)
+      at TypeScriptParserMixin.parseImportSpecifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14419:17)
+      at TypeScriptParserMixin.parseImportSpecifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10148:18)
+      at TypeScriptParserMixin.parseNamedImportSpecifiers (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14398:36)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14242:37)
+      at TypeScriptParserMixin.parseImport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14235:17)
+      at TypeScriptParserMixin.parseImport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9353:26)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12876:27)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (Y:\otm\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (Y:\otm\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (Y:\otm\frontend\node_modules\gensync\index.js:261:32)
+      at Y:\otm\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (Y:\otm\frontend\node_modules\gensync\index.js:223:11)
+      at Y:\otm\frontend\node_modules\gensync\index.js:189:28
+      at Y:\otm\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at Y:\otm\frontend\node_modules\gensync\index.js:113:33
+      at step (Y:\otm\frontend\node_modules\gensync\index.js:287:14)
+      at Y:\otm\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (Y:\otm\frontend\node_modules\gensync\index.js:223:11)
+[2m1:49:04 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\service\InstallationList.tsx: Unexpected token (137:3)
+
+[0m [90m 135 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 136 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 137 |[31m   )
+ [90m     |[31m    [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/service/InstallationList.tsx[39m:137:3
+[33m  135|        </div>
+  136|      </div>
+  137|    )
+     |     ^[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12100:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12086:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9172:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13445:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12403:14)
+      at TypeScriptParserMixin.parseFunction (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13444:10)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13907:19)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9402:18)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13828:25)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9385:20)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12878:27)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (Y:\otm\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+[2m3:20:19 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\accounts\AccountsApprovalList.tsx: Unexpected token (94:0)
+
+[0m [90m 92 |[31m   [90m// ... (NO CHANGE BELOW THIS LINE)[31m
+ [90m 93 |[31m
+[31m[1m>[22m[31m[90m 94 |[31m
+ [90m    |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/accounts/AccountsApprovalList.tsx[39m:94:0
+[33m  92 |    // ... (NO CHANGE BELOW THIS LINE)
+  93 |  
+  94 |  
+     |  ^[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12100:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12086:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9172:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13445:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12403:14)
+      at TypeScriptParserMixin.parseFunction (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13444:10)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13907:19)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9402:18)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13828:25)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9385:20)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12878:27)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (Y:\otm\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+[2m3:33:41 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\accounts\AccountsApprovalList.tsx: Unexpected token (742:21)
+
+[0m [90m 740 |[31m           [33m<[31m[33mPagination[31m
+ [90m 741 |[31m             curPage[33m=[31m{curPage} totalPages[33m=[31m{totalPages}
+[31m[1m>[22m[31m[90m 742 |[31m             setCurPag
+ [90m     |[31m                      [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/accounts/AccountsApprovalList.tsx[39m:742:21
+[33m  740|            <Pagination
+  741|              curPage={curPage} totalPages={totalPages}
+  742|              setCurPag
+     |                       ^[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.jsxParseIdentifier (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4569:12)
+      at TypeScriptParserMixin.jsxParseNamespacedName (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4576:23)
+      at TypeScriptParserMixin.jsxParseAttribute (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4652:22)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4667:28)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10043:18)
+      at TypeScriptParserMixin.jsxParseOpeningElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4662:17)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4686:33)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9775:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseReturnStatement (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+[2m3:56:34 pm[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/pages/order/PurchaseOrderForm.tsx (resolved id: Y:/otm/frontend/src/pages/order/PurchaseOrderForm.tsx) in Y:/otm/frontend/src/App.tsx. Does the file exist?
+[2m4:04:49 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\order\PurchaseOrderForm.tsx: Unexpected token (559:0)
+
+[0m [90m 557 |[31m     [36mreturn[31m [32m""[31m[33m;[31m
+ [90m 558 |[31m   }
+[31m[1m>[22m[31m[90m 559 |[31m
+ [90m     |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/order/PurchaseOrderForm.tsx[39m:559:0
+[33m  557|      return "";
+  558|    }
+  559|  
+     |  ^[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12100:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12086:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9172:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13445:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12403:14)
+      at TypeScriptParserMixin.parseFunction (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13444:10)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13907:19)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9402:18)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13828:25)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9385:20)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12878:27)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (Y:\otm\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+[2m4:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\order\PurchaseOrderForm.tsx: Unexpected token (754:0)
+
+[0m [90m 752 |[31m     }
+ [90m 753 |[31m   }
+[31m[1m>[22m[31m[90m 754 |[31m
+ [90m     |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/order/PurchaseOrderForm.tsx[39m:754:0
+[33m  752|      }
+  753|    }
+  754|  
+     |  ^[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12100:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12086:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9172:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13445:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12403:14)
+      at TypeScriptParserMixin.parseFunction (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13444:10)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13907:19)
+      at TypeScriptParserMixin.parseExportDefaultExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9402:18)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13828:25)
+      at TypeScriptParserMixin.parseExport (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9385:20)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12878:27)
+      at TypeScriptParserMixin.parseStatementContent (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (Y:\otm\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (Y:\otm\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+[2m4:07:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Y:\otm\frontend\src\pages\order\PurchaseOrderForm.tsx: Expected corresponding JSX closing tag for <>. (1214:4)
+
+[0m [90m 1212 |[31m                 [33m<[31m[33m/[31m[33msection[31m[33m>[31m
+ [90m 1213 |[31m               )}
+[31m[1m>[22m[31m[90m 1214 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m      |[31m     [31m[1m^[22m[31m
+ [90m 1215 |[31m   )[33m;[31m
+ [90m 1216 |[31m }
+ [90m 1217 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mY:/otm/frontend/src/pages/order/PurchaseOrderForm.tsx[39m:1214:4
+[33m  1212|                  </section>
+  1213|                )}
+  1214|      </div>
+     |      ^
+  1215|    );
+  1216|  }[39m
+      at constructor (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4720:14)
+      at TypeScriptParserMixin.jsxParseElement (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9775:18)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10893:29)
+      at TypeScriptParserMixin.parseConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9603:18)
+      at TypeScriptParserMixin.parseMaybeConditional (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10885:17)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10784:23)
+      at Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (Y:\otm\frontend\node_modules\@babel\parser\lib\index.js:11046:23)

@@ -1,0 +1,1948 @@
+[24/Mar/2026 13:55:08] "GET /api/master/pincode/options/states/ HTTP/1.1" 200 2291
+[24/Mar/2026 13:55:08] "GET /api/master/service-engineer/options/engineer-names/ HTTP/1.1" 200 5699
+[24/Mar/2026 13:55:08] "GET /api/master/pincode/options/states/ HTTP/1.1" 200 2291
+[24/Mar/2026 13:55:08] "GET /api/master/service-engineer/options/engineer-names/ HTTP/1.1" 200 5699
+[24/Mar/2026 13:55:08,210] - Broken pipe from ('127.0.0.1', 64892)
+[24/Mar/2026 13:55:08,238] - Broken pipe from ('127.0.0.1', 64891)
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 13:55:20] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 231991
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 13:55:37] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232256
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 13:57:27] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 230394
+[24/Mar/2026 13:57:27,855] - Broken pipe from ('127.0.0.1', 55157)
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 13:57:58] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232253
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 13:58:24] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232253
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 14:00:22] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 231988
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 14:01:25] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232253
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 14:03:46] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232256
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 14:06:01] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232256
+[24/Mar/2026 14:29:35] "GET /api/master/state/list/?search=&start=0&length=10&draw=1 HTTP/1.1" 200 1187
+[24/Mar/2026 14:29:36] "GET /api/master/state/list/?search=&start=0&length=10&draw=1 HTTP/1.1" 200 1187
+Internal Server Error: /api/master/service-engineer/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\service_engineer\engineer_serializer.py", line 39, in get
+    .values('unique_id', 'engineer_name', 'emp_id', 'is_active', 'is_delete')
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'engineer_name_creation.created_at' in 'field list'")
+[24/Mar/2026 14:31:54] "GET /api/master/service-engineer/list/ HTTP/1.1" 500 232062
+[24/Mar/2026 14:31:57] "GET /api/master/service-engineer/options/engineer-names/ HTTP/1.1" 200 5699
+[24/Mar/2026 14:31:59] "GET /api/master/service-engineer/options/emp-id/?engineer_name=68d385686543c75630 HTTP/1.1" 200 103
+Bad Request: /api/master/service-engineer/create/
+[24/Mar/2026 14:32:10] "POST /api/master/service-engineer/create/ HTTP/1.1" 400 121
+[24/Mar/2026 14:34:11] "GET /api/master/service-engineer/options/engineer-names/ HTTP/1.1" 200 5699
+Internal Server Error: /api/master/consignee-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\consignee_creation\consigneecreation_viewset.py", line 47, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+[24/Mar/2026 14:40:54] "GET /api/master/consignee-creation/list/?search=&page=1&length=10 HTTP/1.1" 500 235584
+Internal Server Error: /api/master/main-category/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\main_category\maincategory_serializer.py", line 45, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+[24/Mar/2026 15:36:01] "GET /api/master/main-category/list/ HTTP/1.1" 500 231247
+[24/Mar/2026 15:36:20] "POST /api/master/pincode/list/ HTTP/1.1" 200 719
+Internal Server Error: /api/master/consignee-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\consignee_creation\consigneecreation_viewset.py", line 47, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+[24/Mar/2026 15:36:32] "GET /api/master/consignee-creation/list/?search=&page=1&length=10 HTTP/1.1" 500 235584
+Internal Server Error: /api/master/consignee-creation/options/districts/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\consignee_creation\consigneecreation_viewset.py", line 159, in get
+    from master.apps.district.district_model import DistrictCreation
+ModuleNotFoundError: No module named 'master.apps.district.district_model'
+[24/Mar/2026 15:36:47] "GET /api/master/consignee-creation/options/districts/ HTTP/1.1" 500 92726
+Internal Server Error: /api/master/main-category/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\main_category\maincategory_serializer.py", line 45, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+[24/Mar/2026 15:36:54] "GET /api/master/main-category/list/ HTTP/1.1" 500 231247
+Internal Server Error: /api/master/unit-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\unit_creation\unitcreation_viewset.py", line 45, in get
+    "data"           : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+[24/Mar/2026 15:37:16] "GET /api/master/unit-creation/list/ HTTP/1.1" 500 230744
+Internal Server Error: /api/master/main-category/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\main_category\maincategory_serializer.py", line 45, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'main_category.created_at' in 'field list'")
+[24/Mar/2026 15:37:28] "GET /api/master/main-category/list/ HTTP/1.1" 500 229710
+Internal Server Error: /api/master/unit-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\unit_creation\unitcreation_viewset.py", line 45, in get
+    "data"           : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+[24/Mar/2026 15:37:30] "GET /api/master/unit-creation/list/ HTTP/1.1" 500 229216
+Internal Server Error: /api/master/executive-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'executive_name.id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\executive_creation\executivecreation_serializer.py", line 55, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'executive_name.id' in 'field list'")
+[24/Mar/2026 15:37:31] "GET /api/master/executive-creation/list/ HTTP/1.1" 500 230033
+Internal Server Error: /api/master/vendor/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'vendor_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\vendor_creation\vendor_viewset.py", line 52, in get
+    "data":    serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'vendor_creation.created_at' in 'field list'")
+[24/Mar/2026 15:37:33] "GET /api/master/vendor/list/ HTTP/1.1" 500 243733
+Internal Server Error: /api/master/consignee-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\consignee_creation\consigneecreation_viewset.py", line 47, in get
+    "data"            : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'consignee_creation.created_at' in 'field list'")
+[24/Mar/2026 15:37:34] "GET /api/master/consignee-creation/list/ HTTP/1.1" 500 233116
+Internal Server Error: /api/master/unit-creation/list/
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "Y:\otm\Backend\master\viewsets\unit_creation\unitcreation_viewset.py", line 45, in get
+    "data"           : serializer.data,
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "\\192.168.11.31\d\otm\Backend\.deps\rest_framework\serializers.py", line 727, in to_representation
+    return [
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "\\192.168.11.31\d\otm\Backend\.deps\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\aed542\AppData\Roaming\Python\Python310\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'unit_creation.created_at' in 'field list'")
+[24/Mar/2026 15:40:49] "GET /api/master/unit-creation/list/ HTTP/1.1" 500 231009

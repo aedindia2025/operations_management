@@ -1,0 +1,14 @@
+
+> ascent-otm-frontend@1.0.0 dev
+> vite
+
+Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m668278[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.212.134.201:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.29.83:[1m5173[22m/[39m
+[2m9:01:53 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m9:02:37 pm[22m [36m[1m[vite][22m[39m [32m.env.development changed, restarting server...[39m
+[2m9:02:49 pm[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m

@@ -1,0 +1,24 @@
+
+> ascent-otm-frontend@1.0.0 dev
+> vite --host 0.0.0.0 --port 5173
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m10886[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.125:[1m5173[22m/[39m
+[2m5:25:48 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/settings/InsuranceTypeList.tsx, /src/pages/settings/InsuranceTypeForm.tsx, /src/pages/order/PurchaseOrderList.tsx, /src/pages/order/PurchaseOrderForm.tsx, /src/pages/settings/ItemCreationList.tsx, /src/pages/settings/ItemCreationForm.tsx[22m
+[2m5:30:47 pm[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+[2m5:30:58 pm[22m [36m[1m[vite][22m[39m [32m.env.development changed, restarting server...[39m
+[2m5:31:07 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m6:00:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/accounts/CustomerPaymentList.tsx, /src/index.css[22m
+[2m6:05:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
+[2m6:21:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/DeliveryConfirmationList.tsx, /src/index.css[22m
+[2m6:23:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
+[2m6:23:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/DeliveryConfirmationList.tsx, /src/index.css[22m
+[2m6:24:14 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/DeliveryConfirmationList.tsx, /src/index.css[22m
+[2m6:24:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/DeliveryConfirmationList.tsx, /src/index.css[22m
+[2m6:29:18 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
+[2m6:29:20 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
+[2m6:30:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
+[2m6:43:48 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/operation/OperationApprovalList.tsx, /src/index.css[22m
